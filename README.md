@@ -8,8 +8,8 @@ An advanced, command-line tool that leverages a dual-agent AI pipeline to genera
 
 This repository contains the full source code and documentation for the AI Review Assistant. For a detailed breakdown of the product vision, technical architecture, and future roadmap, please see the official project documents:
 
-* [**Product Requirements Document (PRD)**]
-* [**System Flowchart & Legend**]
+* **Product Requirements Document (PRD)**
+* **System Flowchart & Legend**
 
 ---
 
