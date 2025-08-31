@@ -8,8 +8,8 @@ An advanced, command-line tool that leverages a dual-agent AI pipeline to genera
 
 This repository contains the full source code and documentation for the AI Review Assistant. For a detailed breakdown of the product vision, technical architecture, and future roadmap, please see the official project documents:
 
-* [**Product Requirements Document (PRD)**](https://www.google.com/search?q=Product_Requirements_Document.md "null")
-* [**System Flowchart & Legend**](https://www.google.com/search?q=System_Flowchart.md "null")
+* [**Product Requirements Document (PRD)**](https://github.com/swizzcheeze/AmazonReviewAgent/Product_Requirements_Document.md "null")
+* [**System Flowchart & Legend**](https://github.com/swizzcheeze/AmazonReviewAgent/System_Flowchart.md) "null")
 
 ---
 
