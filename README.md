@@ -1,6 +1,6 @@
 # AI-Powered Review Assistant (Agent Pipeline Edition)
 
-An advanced, command-line tool that leverages a dual-agent AI pipeline to generate high-quality, context-aware product reviews. This assistant allows users to connect to multiple Large Language Model (LLM) providers, including Google's Gemini, Ollama, and LM Studio, to create nuanced and human-like reviews.
+An advanced, command-line tool that leverages a dual-agent AI pipeline to generate high-quality, context-aware product reviews. This assistant allows users to connect to multiple Large Language Model (LLM) providers, including Google's Gemini, OpenRouter, Ollama, and LM Studio, to create nuanced and human-like reviews.
 
 ---
 
@@ -16,7 +16,7 @@ This repository contains the full source code and documentation for the AI Revie
 ## Key Features
 
 * **Dual-Agent Pipeline:** Utilizes a "Writer" agent to generate an initial draft and a separate "Editor" agent to refine, humanize, and improve the final output.
-* **Multi-Provider Support:** Easily configure the application to use different LLMs for the writer and editor roles. Supports cloud-based models (Gemini) and locally-hosted models (Ollama, LM Studio).
+* **Multi-Provider Support:** Easily configure the application to use different LLMs for the writer and editor roles. Supports cloud-based models (Gemini, OpenRouter) and locally-hosted models (Ollama, LM Studio).
 * **Context-Aware Generation:** Can scrape a product's URL to gather real-time product information and analyze past reviews to generate new reviews that are consistent in tone and style.
 * **Simple CLI Interface:** A straightforward menu-driven interface for writing reviews, listing past reviews, and managing settings.
 * **Configurable & Extensible:** All settings, including API keys and model endpoints, are managed in a simple `config.json` file.
@@ -73,7 +73,7 @@ The following diagram illustrates the complete workflow of the application.
     * **1. Write a new review:** Provide a product name, rating, and notes to generate a review using the standard pipeline.
     * **2. Write a new review with product context:** Provide a product URL in addition to your notes to generate a more detailed and context-aware review.
     * **3. List past reviews:** View a list of all reviews you have saved in the `reviews/` directory.
-    * **4. Settings:** Configure which LLM provider to use for the "Writer" and "Editor" agents and enter your Gemini API key.
+    * **4. Settings:** Configure which LLM provider to use for the "Writer" and "Editor" agents and enter any required API keys.
     * **5. Exit:** Close the application.
 
 ---
@@ -97,12 +97,17 @@ The `config.json` file is the control center for the AI pipeline.
     },
     "lmstudio": {
       "endpoint": "http://localhost:1234/v1/chat/completions"
+    },
+    "openrouter": {
+      "api_key": "YOUR_API_KEY_HERE",
+      "model": "openrouter/auto"
     }
   }
 }
 ```
-* **`writer_provider` / `editor_provider`:** Can be set to `"gemini"`, `"ollama"`, or `"lmstudio"`.
-* **`api_key`:** If using Gemini, you must replace `"YOUR_API_KEY_HERE"` with your actual Google AI Studio API key.
+* **`writer_provider` / `editor_provider`:** Can be set to `"gemini"`, `"openrouter"`, `"ollama"`, or `"lmstudio"`.
+* **`api_key`:** Replace with your actual API key for Gemini or OpenRouter when those providers are used.
+* **`model`:** Specify the desired OpenRouter model (default `openrouter/auto`).
 * **`endpoint`:** Ensure the endpoints for Ollama or LM Studio match your local server configuration.
 
 ---

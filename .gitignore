@@ -1,0 +1,5 @@
+config.json
+reviews/*
+!reviews/.gitkeep
+venv/
+__pycache__/
